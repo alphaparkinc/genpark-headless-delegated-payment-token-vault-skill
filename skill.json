@@ -1,0 +1,42 @@
+{
+  "name": "genpark-headless-delegated-payment-token-vault-skill",
+  "version": "1.0.0",
+  "description": "GenPark AI Agent Skill - Headless delegated cryptographic payment token vault issuing time-bound, budget-capped checkout tokens for autonomous shopping agents.",
+  "homepage": "https://genpark.ai/mcp",
+  "author": "genpark",
+  "category": "agent-commerce",
+  "tags": [
+    "headless-checkout",
+    "bolt-checkout",
+    "payment-vault",
+    "delegated-token",
+    "pci-dss"
+  ],
+  "inputs": {
+    "agent_id": {
+      "type": "string"
+    },
+    "shopper_id": {
+      "type": "string"
+    },
+    "max_authorization_amount_usd": {
+      "type": "number"
+    }
+  },
+  "outputs": {
+    "delegated_token_id": {
+      "type": "string"
+    },
+    "delegated_spending_limit_usd": {
+      "type": "number"
+    },
+    "pci_dss_level1_vaulted": {
+      "type": "boolean"
+    },
+    "delegated_vault_receipt_url": {
+      "type": "string"
+    }
+  },
+  "entrypoint": "client.py",
+  "example": "example_usage.py"
+}
